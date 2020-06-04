@@ -18,7 +18,11 @@ var arr = [10,20,30];
 */
 
 //Code Here
+function first(array) {
+  return array[0];
+}
 
+console.log(first(arr));
 
 
 ////////// PROBLEM 2 //////////
@@ -33,7 +37,9 @@ var arr = [40,50,60];
 */
 
 //Code Here
-
+function last(array) {
+  return array[array.length - 1];
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -48,7 +54,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 */
 
 //Code Here
-
+function looper(theFam) {
+  for(i = 0; i < theFam.length; i++) {
+    alert(theFam[i]);
+  }
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -63,7 +73,11 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
-
+function reversedLooper(letters) {
+  for(i = letters.length - 1; i >= 0; i--) {
+    alert(letters[i]);
+  }
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -78,7 +92,17 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 */
 
 //Code Here
+function evenFinder(nums) {
+  let evenNums = [];
+  for(i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 === 0) {
+      evenNums.push(nums[i]);
+    }
+  }
+  return evenNums;
+}
 
+evenFinder(nums);
 
 
 
@@ -107,7 +131,18 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
-
+function divider(numbersArray) {
+  let array = [[], []];
+  for(i = 0; i < numbersArray.length; i++) {
+    if (numbersArray[i] % 2 === 0) {
+      array[0].push(numbersArray[i]);
+    }
+    else if (numbersArray[i] % 2 != 0) {
+      array[1].push(numbersArray[i]);
+    }
+  }
+  return array;
+}
 
 
 ////////// PROBLEM 7 //////////
@@ -129,7 +164,15 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
-
+function finder(array) {
+  let randomNumber = getRandomArbitrary();
+  for (x = 0; x < array.length; x++) {
+    if (array[x] === randomNumber) {
+      return true;
+    }
+  }
+  return false;
+}
 
 
 ////////// PROBLEM 8 //////////
@@ -190,16 +233,8 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 ////////// PROBLEM 11 //////////
 
 // Do not edit the code below.
-var num1 = Math.floor(Math.random() * 30);
-var num2 = Math.floor(Math.random() * 30);
-var arr1 = [];
-var arr2 = [];
-for(var i = 0; i < num1; i++){
-  arr1.push(i);
-}
-for(var i = 0; i < num2; i++){
-  arr2.push(i);
-}
+
+
 // Do not edit the code above.
 
 /*
